@@ -17,7 +17,8 @@ namespace MonoBalanc3R
 
 		static void Main(string[] args)
 		{
-			Console.WriteLine("MonoBlanc start...");
+			Console.WriteLine("MonoBalancer C# start...");
+			ManualResetEvent terminateProgram = new ManualResetEvent(false);
 
 			var ba = new Balanc3R();
 			TickTimer tm = new TickTimer(ba.OnBalanceLoop, 20);
@@ -44,19 +45,17 @@ namespace MonoBalanc3R
 			// TickTimer tm = new TickTimer(ba.OnBalanceLoop, null, 0, 20);
 			tm.Start ();
 			Console.WriteLine("start to move");
-			bool loop = true;
 			ba.OnStop += () => { 
 				tm.Stop();
 				Console.WriteLine("stop to move");
-				loop = false;
+				terminateProgram.Set();
 			};
 			// 自動で動くループ
-			// ba.MoveLoop(null);
+			ba.MoveLoop(null);
 			// 赤外線リモコンループ
-			ba.RemoteLoop(null);
+			// ba.RemoteLoop(null);
 			// 無限ループ
-			while (loop)
-				Thread.Sleep(500);
+			terminateProgram.WaitOne(); 
 		}
 
 	}

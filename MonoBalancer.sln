@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoBalancer", "MonoBalancer\MonoBalancer.csproj", "{530C96FE-EDFC-4634-BC00-3879427A7771}"
 EndProject
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "MonoBalancerF", "MonoBalancerF\MonoBalancerF.fsproj", "{65EE5520-ED8C-48B5-97BD-5584B6CFF1EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{530C96FE-EDFC-4634-BC00-3879427A7771}.Debug|x86.Build.0 = Debug|x86
 		{530C96FE-EDFC-4634-BC00-3879427A7771}.Release|x86.ActiveCfg = Release|x86
 		{530C96FE-EDFC-4634-BC00-3879427A7771}.Release|x86.Build.0 = Release|x86
+		{65EE5520-ED8C-48B5-97BD-5584B6CFF1EE}.Debug|x86.ActiveCfg = Debug|x86
+		{65EE5520-ED8C-48B5-97BD-5584B6CFF1EE}.Debug|x86.Build.0 = Debug|x86
+		{65EE5520-ED8C-48B5-97BD-5584B6CFF1EE}.Release|x86.ActiveCfg = Release|x86
+		{65EE5520-ED8C-48B5-97BD-5584B6CFF1EE}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
